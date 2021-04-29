@@ -75,6 +75,8 @@ class ggNtuplizer : public edm::EDAnalyzer {
   void branchesElectrons  (TTree*);
   void branchesHFElectrons(TTree*);
   void branchesMuons      (TTree*);
+  void branchesTrackerMuons      (TTree*);
+  void branchesStandAloneMuons      (TTree*);
   void branchesTaus       (TTree*);
   void branchesJets       (TTree*);
   void branchesAK8Jets    (TTree*);
@@ -88,6 +90,8 @@ class ggNtuplizer : public edm::EDAnalyzer {
   void fillElectrons  (const edm::Event&, const edm::EventSetup&, math::XYZPoint&);
   void fillHFElectrons(const edm::Event&);
   void fillMuons      (const edm::Event&, math::XYZPoint&, const reco::Vertex);
+  void fillTrackerMuons      (const edm::Event&, math::XYZPoint&, const reco::Vertex);
+  void fillStandAloneMuons      (const edm::Event&, math::XYZPoint&, const reco::Vertex);
   void fillTaus       (const edm::Event&);
   void fillJets       (const edm::Event&, const edm::EventSetup&);
   void fillAK8Jets    (const edm::Event&, const edm::EventSetup&);
